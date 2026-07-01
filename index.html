@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AsemicTool</title>
+    <link rel="icon" href="media/favicon.png" type="image/icon">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/jdc0qxu.css">
+    <link rel="stylesheet" href="https://use.typekit.net/jdc0qxu.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rps1iww.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rps1iww.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="intro-overlay"></div>
+
+    <img src="media/intro.jpg" id="parallax-intro-bg" alt="Intro Background">
+
+    <header id="main-header">
+        <div class="logo-container">
+            <img src="media/titolo.jpg" id="logo-titolo" alt="Titolo Progetto">
+        </div>
+        
+        <div id="header-controls">
+            <div class="lang-switcher">
+                <button onclick="changeLang('ita')">ITA</button>
+                <button onclick="changeLang('eng')">ENG</button>
+                <button onclick="changeLang('asemic')">ASEMIC</button>
+            </div>
+            <nav class="site-nav">
+                <a href="#introduzione" class="nav-link active" data-ita="Introduzione" data-eng="Introduction">Introduzione</a>
+                <a href="#parte-prima" class="nav-link" data-ita="Parte PRIMA" data-eng="Part ONE">Parte PRIMA</a>
+                <a href="#parte-seconda" class="nav-link" data-ita="Parte SECONDA" data-eng="Part TWO">Parte SECONDA</a>
+                <a href="#parte-terza" class="nav-link" data-ita="Parte TERZA" data-eng="Part THREE">Parte TERZA</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        
+        <section id="introduzione" class="scroll-section">
+            <div class="intro-text-wrapper">
+                <br><br><br>
+                <h1 class="teaser" data-ita="La Scrittura asemica, al limite tra il familiare e l’incomprensibile, rappresenta, attraverso segni tersi sui fogli, il dubbio del non capire" data-eng="Asemic writing, straddling the line between the familiar and the incomprehensible, represents, through subtle marks on the page, the doubt that comes from not understanding.">
+                    La Scrittura Asemica, al limite <br> tra il familiare e l’incomprensibile, rappresenta, attraverso segni tersi sui fogli, il dubbio del non capire</h1>
+                <p class="sub-teaser" data-ita="Incomprensibile da leggere e tradurre, e per questo profondamente universale, la scrittura asemica racconta il gesto di chi l’ha tracciata e svela attraverso lo stupore il cuore di chi la guarda. in generale si definisce tale ciò che ricorda un tratto calligrafico, ciò che suggerisce una scrittura con significato o 
+                    un’impostazione di pagina già vista, scardinando però la comprensibilità dei segni e degli elementi rendendoli completamente irriconoscibili.
+                    Il termine asemico, ereditato dal gergo medico, ha origini molto recenti, sviluppatosi e diffusosi soprattutto grazie alla diffusione e all'accessibilità di un metodo di connessione efficace come la rete e i blog personali, ma questo tipo di visione, di attività, incentrata sulla desemantizzazione, sulla distruzione del segno e dell'idea di scrittura preconcetta, 
+                    è radicata in periodi precedenti, che hanno preparato e arricchito il panorama attuale. Inoltre, guardando la scrittura come tramite per realtà esoteriche, critiche e misteriose, è possibile rintracciare radici dell'asemico ancor più antiche e sparse in tutto il globo." 
+                    data-eng="Incomprehensible to read and translate, and therefore profoundly universal, asemic writing conveys the gesture of the person who created it and, through a sense of wonder, reveals the heart of the viewer. Generally speaking, it is defined as anything that resembles a calligraphic stroke, anything that suggests writing with meaning or a page layout we’ve seen before, yet undermines the comprehensibility of the signs and elements, rendering them completely unrecognizable.
+                    The term “asemic,” borrowed from medical jargon, has very recent origins; it developed and spread primarily thanks to the proliferation and accessibility of effective communication methods such as the internet and personal blogs. However, this type of vision and practice—centered on the removal of meaning, the destruction of the sign, and the dismantling of preconceived notions of writing, is rooted in earlier periods that have shaped and enriched the current landscape. Furthermore, by viewing writing as a conduit for esoteric, critical, and mysterious realities, it is possible to trace the roots of the asemic back even further, scattered across the globe.">
+                    Incomprensibile da leggere e tradurre, e per questo profondamente universale, la scrittura asemica racconta il gesto di chi l’ha tracciata e svela attraverso lo stupore il cuore di chi la guarda. in generale si definisce tale ciò che ricorda un tratto calligrafico, ciò che suggerisce una scrittura con significato o 
+                    un’impostazione di pagina già vista, scardinando però la comprensibilità dei segni e degli elementi rendendoli completamente irriconoscibili.
+                    Il termine "asemico", ereditato dal gergo medico, ha origini molto recenti, sviluppatosi e diffusosi soprattutto grazie alla diffusione e all'accessibilità di un metodo di connessione efficace come la rete e i blog personali, ma questo tipo di visione, di attività, incentrata sulla desemantizzazione, sulla distruzione del segno e dell'idea di scrittura preconcetta, 
+                    è radicata in periodi precedenti, che hanno preparato e arricchito il panorama attuale. Inoltre, guardando la scrittura come tramite per realtà esoteriche, critiche e misteriose, è possibile rintracciare radici dell'asemico ancor più antiche e sparse in tutto il globo.</p>
+            </div>
+        </section>
+<br> <br> <br>
+        <section id="parte-prima" class="scroll-section">
+            <br><br><br>
+            <h1 class="capitolini" data-ita="Scrittura asemica nella storia" data-eng="Asemic writing through history">Scrittura asemica nella storia</h1><br><br>
+            <div class="gallery-wrapper">
+                    <div class="gallery-item">
+                    <img src="media/galleria/taomagico.jpg" class="lightbox-target" alt="Gallery 1">
+                    <h3 data-ita="Tao Magico" data-eng="Magic Tao">Tao Magico</h3>
+                    <h4 data-ita="(Cina xi-xvi Sec.)" data-eng="(Cina xi-xvi Century)">(Cina xi-xvi Sec.)</h4>
+                    <p class="didascalie" data-ita="Unico esempio sopravvissuto della scrittura segreta conosciuta
+                                come “caratteri brillanti di giada” basata sui
+                                trigrammi dell’I-ching e utilizzata nei talismani riferiti
+                                ai cambiamenti, 1115 Tao-tsang" 
+                                data-eng="The only surviving example of the secret script known as “brilliant jade characters,” based on the trigrams of the I Ching and used in talismans related to change, 1115 Tao-tsang">
+                                Unico esempio sopravvissuto della scrittura segreta conosciuta
+                                come <i>“caratteri brillanti di giada”</i> basata sui trigrammi dell’<i>I-ching</i> e utilizzata nei talismani riferiti ai cambiamenti, 1115 Tao-tsang</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="media/galleria/blank.jpg" class="lightbox-target" alt="Gallery 2">
+                    <h3 data-ita="Irma Blank" data-eng="Irma Blank">Irma Blank</h3>
+                    <h4 data-ita="(Germania-Italia, 1934-2023)" data-eng="(Germany-Italy, 1934-2023)">(Germania-Italia, 1934-2023)</h4>
+                    <p  class="didascalie" data-ita="Irma Blank, Trascrizioni, 1974, inchiostro di china su
+                                carta simile a pergamena, 33 × 43,5 cm, © Irma Blank e
+                                P420, Bologna" 
+                                data-eng="Irma Blank, Transcriptions, 1974, India ink on
+                                parchment-like paper, 33 × 43.5 cm, © Irma Blank and
+                                P420, Bologna">
+                                Irma Blank, <i>Trascrizioni</i>, 1974, inchiostro di china su
+                                carta simile a pergamena, 33 × 43,5 cm, © Irma Blank e
+                                P420, Bologna</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="media/galleria/campedelli.jpg" class="lightbox-target" alt="Gallery 3">
+                    <h3 data-ita="Marco Campedelli" data-eng="Marco Campedelli">Marco Campedelli</h3>
+                    <h4 data-ita="(Verona, Italia)" data-eng="(Verona, Italy)">(Verona, Italia)</h4>
+                    <p  class="didascalie" data-ita="Immagine concessa per gentile autorizzazione dell’artista Marco Campedelli" 
+                                data-eng="Image used with the kind permission of the artist Marco Campedelli">
+                                Immagine concessa per gentile autorizzazione dell’artista Marco Campedelli</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="media/galleria/dengo.png" class="lightbox-target" alt="Gallery 4">
+                    <h3 data-ita="Monica Dengo" data-eng="Monica Dengo">Monica Dengo</h3>
+                    <h4 data-ita="(Arezzo, Italia)" data-eng="(Arezzo, Italy)">(Arezzo, Italia)</h4>
+                    <p  class="didascalie" data-ita="Immagine concessa per gentile autorizzazione dell’artista Monica Dengo" data-eng="Image used with the kind permission of the artist Monica Dengo">
+                                Immagine concessa per gentile autorizzazione dell’artista Monica Dengo</p>
+                </div>
+                 <div class="gallery-item">
+                    <img src="media/galleria/federici.jpg" class="lightbox-target" alt="Gallery 4">
+                    <h3 data-ita="Federico Federici" data-eng="Federico Federici">Federico Federici</h3>
+                    <h4 data-ita="(Italia)" data-eng="(Italy)">(Italia)</h4>
+                    <p  class="didascalie" data-ita="Immagine concessa per gentile autorizzazione dell’artista Federico Federici" data-eng="Image used with the kind permission of the artist Federico Federici">
+                        Immagine concessa per gentile autorizzazione dell’artista Federico Federici</p>
+                </div>
+                     <div class="gallery-item">
+                    <img src="media/galleria/gaze.webp" class="lightbox-target" alt="Gallery 4">
+                    <h3 data-ita="Tim Gaze" data-eng="Tim Gaze">Tim Gaze</h3>
+                    <h4 data-ita="(Australia)" data-eng="(Australia)">(Australia)</h4>
+                    <p  class="didascalie" data-ita="Tim Gaze, da Poemeleon: A Journal of Poetry
+                        © 2019 Poemeleon Tim Gaze" data-eng="Tim Gaze, from Poemeleon: A Journal of Poetry
+                        © 2019 Poemeleon Tim Gaze">
+                        Tim Gaze, da Poemeleon: A Journal of Poetry
+                        © 2019 Poemeleon Tim Gaze</p>
+                </div>
+                     <div class="gallery-item">
+                    <img src="media/galleria/giovenale.png" class="lightbox-target" alt="Gallery 4">
+                    <h3 data-ita="Marco Giovenale" data-eng="Marco Giovenale">Marco Giovenale</h3>
+                    <h4 data-ita="(Roma, Italia)" data-eng="(Rome, Italy)">(Roma, italia)</h4>
+                    <p  class="didascalie" data-ita="Immagine concessa per gentile autorizzazione dell’artista Marco Giovenale" data-eng="Image used with the kind permission of the artist Marco Giovenale">
+                        Immagine concessa per gentile autorizzazione dell’artista Marco Giovenale</p>
+                </div>
+                     <div class="gallery-item">
+                    <img src="media/galleria/gu.jpg" class="lightbox-target" alt="Gallery 4">
+                    <h3 data-ita="Wenda Gu" data-eng="Wenda Gu">Wenda Gu</h3>
+                    <h4 data-ita="(Cina-USA, 1955)" data-eng="(Cina-USA, 1955)">(Cina-USA, 1955)</h4>
+                    <p  class="didascalie" data-ita="Wenda Gu, Il mito delle dinastie perdute - forma C:
+                            scrittura pseudo-sigillare in avvolgimento antico,
+                            1985-87, spruzzi d’inchiostro su carta di riso, sigillo,
+                            50 opere in totale, 150 × 84 cm ciascuna
+                            Accademia Cinese di Belle Arti, Hangzhou, Cina" 
+                            data-eng="Wenda Gu, The Myth of the Lost Dynasties - Form C:
+                            pseudo-seal script in ancient scroll style,
+                            1985–87, ink splatters on rice paper, seal,
+                            50 works in total, 150 × 84 cm each
+                            China Academy of Art, Hangzhou, China">
+                            Wenda Gu, <i>Il mito delle dinastie perdute</i> - forma C:
+                            scrittura pseudo-sigillare in avvolgimento antico,
+                            1985-87, spruzzi d’inchiostro su carta di riso, sigillo,
+                            50 opere in totale, 150 × 84 cm ciascuna
+                            Accademia Cinese di Belle Arti, Hangzhou, Cina</p>
+                </div>
+                     <div class="gallery-item">
+                    <img src="media/galleria/kaikkonen.jpg" class="lightbox-target" alt="Gallery 4">
+                    <h3 data-ita="Satu Kaikkonen" data-eng="Satu Kaikkonen">Satu Kaikkonen</h3>
+                    <h4 data-ita="(Finlandia, 1967)" data-eng="(Finland, 1967)">(Finlandia, 1967)</h4>
+                    <p  class="didascalie" data-ita="Quarta didascalia di prova." data-eng="Satu Kaikkonen, Just Some Writings, 21 January 2024,
+                        from the author's personal website">Satu Kaikkonen, <i>Just Some Writings</i>, 21 gennaio 2024,
+                        pubblicato sul sito personale dell’autore</p>
+                </div>
+                     <div class="gallery-item">
+                    <img src="media/galleria/leftwich.jpeg" class="lightbox-target" alt="Gallery 4">
+                    <h3 data-ita="Jim Leftwich" data-eng="Jim Leftwich">Jim Leftwich</h3>
+                    <h4 data-ita="(Charlottesville, USA, 1956-2025 )" data-eng="(Charlottesville, USA, 1956-2025 )">(Charlottesville, USA, 1956-2025 )</h4>
+                    <p  class="didascalie" data-ita="Jim Leftwich, Marks, 1997 da Lost & Found Times #39" data-eng="Jim Leftwich, Marks, 1997 da Lost & Found Times #39">Jim Leftwich, <i>Marks</i>, 1997 da Lost & Found Times #39</p>
+                </div>
+                     <div class="gallery-item">
+                    <img src="media/galleria/worke.webp" class="lightbox-target" alt="Gallery 4">
+                    <h3 data-ita="Wosene Worke Kosrof" data-eng="Wosene Worke Kosrof">Wosene Worke Kosrof</h3>
+                    <h4 data-ita="(Etiopia-USA 1950)" data-eng="(Etiopia-USA 1950)">(Etiopia-USA 1950)</h4>
+                    <p  class="didascalie" data-ita="Wosene Worke Kosrof, WordPlay, 2002, acrilico su
+tela, 46,4 × 45,7 cm Collezione dell’artista" data-eng="Wosene Worke Kosrof, WordPlay, 2002, acrilic on
+canvas, 46,4 × 45,7 cm Personal Collection of the artist">Wosene Worke Kosrof, <i>WordPlay</i>, 2002, acrilico su
+tela, 46,4 × 45,7 cm Collezione dell’artista</p>
+                </div>
+            </div>
+        </section>
+<br> <br>
+        <section id="parte-seconda" class="scroll-section">
+            <img src="media/parte seconda sfondo.jpg" class="section-bg-watermark" alt="Sfondo Sezione 2">
+            
+            <div class="two-columns">
+                <div class="text-column">
+                    <br><br><br>
+                    <h1 class="capitolini" data-ita="Esperimenti personali di scritture nuove" data-eng="Personal experiments of made-up writings">Esperimenti personali <br>di scritture nuove</h1>
+                    <br> <br> <p data-ita="Accanto, alcuni esempi di sviluppi ed esperimenti personali ispirati dall’osservazione di autori e autrici asemici e asemiche, utilizzando  tecniche e supporti diversi e ascoltando suggestioni scrittoree varie."
+                    data-eng="Below are some examples of personal developments and experiments inspired by the work of asemic authors, using various techniques and media and drawing on diverse literary influences.">
+                    Accanto, alcuni esempi di sviluppi ed esperimenti personali ispirati dall’osservazione di autori e autrici asemici e asemiche, utilizzando  tecniche e supporti diversi e ascoltando suggestioni scrittoree varie.</p>
+                </div>
+                <div class="image-column-grid">
+                    <div class="zoom-container"><img src="media/sofia.jpg" class="lightbox-target" alt="Image 1"></div>
+                    <div class="zoom-container"><img src="media/RISGUARDIE.png" class="lightbox-target" alt="Image 2"></div>
+                    <div class="zoom-container"><img src="media/parte seconda 1.jpg" class="lightbox-target" alt="Parte Seconda 1"></div>
+                    <div class="zoom-container"><img src="media/parte seconda 2.jpg" class="lightbox-target" alt="Parte Seconda 2"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="parte-terza" class="scroll-section target-dark-zone">
+            <br><br><br><br>
+            <h1 class="capitolini" data-ita="Asemia intorno al mondo" data-eng="Asemic writing around the globe">Asemia intorno al mondo</h1><br>
+            <p id="trafilettofine" data-ita="L'attività della scrittura asemica appartiene alle nostre vite molto più di quanto si pensi: 
+            i segni che si fanno provando una penna che non funziona, le scritte tracciate sovrappensiero mentre si ascolta una telefonata, 
+            le scritture inventate o che si fanno prima di imparare a scrivere quando si è bambini: sono tutte scritture asemiche che, vicine a quelle dei calligrafi, 
+            si annoverano al grande gruppo, facendone parte a pieno titolo nonostante siano spesso sommerse nella quotidianità." 
+            data-eng="Asemic writing is much more a part of our lives than we realize: the marks we make when testing a pen that doesn’t work, 
+            the scribbles we make absentmindedly while listening to a phone call, the made-up writings or those we create before learning to write as children: these are all asemic writings that, 
+            similar to those of calligraphers, belong to the larger group, forming an integral part of it despite often being buried in the hustle and bustle of daily life.">
+            L'attività della scrittura asemica appartiene alle nostre vite molto più di quanto si pensi: i segni che si fanno provando una penna che non funziona, le scritte tracciate sovrappensiero mentre si ascolta una telefonata, 
+            le scritture inventate o che si fanno prima di imparare a scrivere quando si è bambini: sono tutte scritture asemiche che, vicine a quelle dei calligrafi, si annoverano al grande gruppo, 
+            facendone parte a pieno titolo nonostante siano spesso sommerse nella quotidianità.</p><br><br>
+            <div id="map"></div>
+            <div class="upload-section">
+                <div class="upload-container">
+                    <label for="image-uploader" class="upload-box" id="drop-zone">
+                        <span id="upload-text" data-ita="Clicca o trascina qui un'immagine per caricarla" data-eng="Click or drag an image here to upload">Clicca o trascina qui un'immagine per caricarla</span>
+                        <img id="image-preview" src="" alt="Anteprima" style="display: none;">
+                    </label>
+                    <input type="file" id="image-uploader" accept="image/*" style="display: none;">
+                </div>
+                
+                <div class="form-container">
+                    <p data-ita="Inserisci i tuoi dati e carica l'immagine del tuo pezzo asemico. Al momento dell'invio, l'opera verrà geolocalizzata in tempo reale e aggiunta come nuovo landmark sulla mappa soprastante." 
+                    data-eng="Insert your data and upload your asemic piece. Upon submission, your work will be geolocated in real time and added as a new landmark on the map above.">
+                        Inserisci i tuoi dati e carica l'immagine del tuo pezzo asemico. Al momento dell'invio, l'opera verrà geolocalizzata in tempo reale e aggiunta come nuovo landmark sulla mappa soprastante.</p>
+                    
+                    <form id="user-form">
+                        <label data-ita="Nome o soprannome:" data-eng="Name or nickname:">Nome o soprannome:</label>
+                        <input type="text" id="form-name" required>
+
+                        <label data-ita="Provenienza geografica/culturale (es: Bologna, Italia):" data-eng="Geographical/cultural origin (e.g. London, UK):">Provenienza geografica/culturale (es: Bologna, Italia):</label>
+                        <input type="text" id="form-location" required>
+
+                        <label data-ita="Alcune note eventuali sul pezzo asemico:" data-eng="Any notes on the asemic piece:">Alcune note eventuali sul pezzo asemico:</label>
+                        <textarea id="form-notes" rows="3"></textarea>
+                        
+                        <button type="submit" id="submit-btn" data-ita="Invia e posiziona sulla mappa" data-eng="Submit and place on map">Invia e posiziona sulla mappa</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="lightbox-overlay">
+        <span id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Ingrandimento">
+    </div>
+
+    <footer>
+        <p data-ita="Sito sviluppato da SOFIA BONI | Tesi Magistrale - ISIA U 2026 FONTS FreightMono Pro Medium di Joshua Darden e SomaSoma di Jess Henderson I diritti di tutte le immagini riprodotte in questo sito restano di proprietà dei rispettivi autori, artisti, fotografi, archivi, fondazioni, istituzioni, editori o aventi diritto." 
+        data-eng="Site developed by SOFIA BONI | MA Thesis - ISIA U 2026 FONTS FreightMono Pro Medium by Joshua Darden and SomaSoma by Jess Henderson. All rights related to the displayed images are strictly propriety of the authors, artists, photographers, archives,foundations, holdings, publishers and in general anyone having the right to own them">&copy; 
+        Sito sviluppato da SOFIA BONI | Tesi Magistrale - ISIA U 2026 
+        <br> FONTS FreightMono Pro Medium di Joshua Darden e SomaSoma di Jess Henderson 
+        <br> I diritti di tutte le immagini riprodotte in questo sito restano di proprietà dei rispettivi autori, artisti, fotografi, archivi, fondazioni, istituzioni, editori o aventi diritto.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

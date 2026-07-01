@@ -1,0 +1,483 @@
+@font-face {
+    font-family: 'SomaSoma';
+    src: url('media/SomaSoma.ttf') format('truetype'),
+         url('media/SomaSoma.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+    overflow-x: hidden;
+    font-family: "freight-macro-pro", serif;
+    font-weight: 400;
+    transition: background-color 1s ease, color 1s ease;
+}
+
+strong, b, h3, h4, label {
+    font-family: "freight-macro-pro", serif;
+    font-weight: 900;
+}
+
+/* --- LANDING E INTRO PARALLASSE --- */
+#intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 1001;
+    transition: opacity 1.5s ease-in-out;
+    pointer-events: none;
+}
+
+#parallax-intro-bg {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 45%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+}
+body.ready #parallax-intro-bg {
+    opacity: 0.9;
+}
+
+/* --- HEADER FISSO COMPRESSO --- */
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: height 0s linear 2s, background-color 0.8s ease, border-bottom 0.8s ease;
+    pointer-events: none;
+}
+
+.logo-container {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    transition: all 1.5s ease-in-out;
+}
+
+#logo-titolo {
+    width: 50vw; 
+    max-width: 400px;
+    height: auto;
+    transition: all 1.5s ease-in-out, filter 0.8s ease;
+}
+
+body.ready #intro-overlay {
+    opacity: 0;
+}
+
+body.ready #main-header {
+    height: 80px; 
+    pointer-events: auto;
+    background: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+body.ready .logo-container {
+    top: 20px;
+    left: 30px;
+    transform: translate(0, 0);
+}
+
+body.ready #logo-titolo {
+    width: 120px; 
+}
+
+#header-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out;
+    margin-left: auto;
+}
+
+body.ready #header-controls {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lang-switcher button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    margin-left: 15px;
+    font-family: inherit;
+    color: inherit;
+    font-size: 13px;
+}
+
+.site-nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.5s ease;
+}
+
+body.ready .site-nav a.active {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+/* --- CONTENUTO SCORREVOLE --- */
+#main-content {
+    padding-top: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: padding-top 1.5s ease-in-out;
+}
+
+body.ready #main-content {
+    padding-top: 110px; 
+}
+
+.scroll-section {
+    position: relative;
+    min-height: 65vh;
+    padding: 30px 0;   
+}
+
+.intro-text-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 65%;
+}
+
+#trafilettofine{
+    max-width: 65%;
+}
+
+.teaser {
+    font-family: "freight-display-pro", serif;
+    font-weight: 900; 
+    font-style: italic; 
+    font-size: 40px;
+    text-align: left;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+
+
+/* CLASSE DI INDICAZIONE ZOOM PER IMMAGINI LIGHTBOX */
+.lightbox-target {
+    cursor: zoom-in;
+}
+
+/* PARTE PRIMA */
+#parte-prima {
+    z-index: 3;
+}
+.gallery-wrapper {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding-bottom: 5px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.gallery-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-item {
+    min-width: 300px;
+}
+.gallery-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* PARTE SECONDA - FILIGRANA LEGATA AL BORDO DESTRO DELLO SCHERMO INTERO */
+.section-bg-watermark {
+    position: absolute;
+    left: calc(50% - 50vw); 
+    bottom: 80px;             
+    top: auto;                 
+    width: 45vw;               
+    max-height: 66vh;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.two-columns {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 5%;
+}
+.text-column {
+    flex: 1;
+}
+.image-column-grid {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.zoom-container {
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+.zoom-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.zoom-container img:hover {
+    transform: scale(1.25);
+}
+
+/* --- PARTE TERZA (MAPPA E INPUT INVERTITI) --- */
+#map {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 60px;
+    background: #000000;
+}
+
+/* Icone Mappa */
+.custom-marker {
+    background: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.custom-marker-triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 18px solid #ffffff;
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 2px #000000);
+}
+
+/* Stile Baloon */
+.leaflet-popup-content-wrapper {
+    background: #222222 !important;
+    color: #ffffff !important;
+    border-radius: 4px;
+    font-family: inherit;
+    padding: 5px;
+}
+.leaflet-popup-content h3 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #ffffff !important;
+}
+.leaflet-popup-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+}
+.leaflet-popup-close-button {
+    color: #ffffff !important;
+}
+.leaflet-popup-tip {
+    background: #222222 !important;
+}
+
+/* Form a Sinistra, Upload Box a Destra */
+.upload-section {
+    display: flex;
+    flex-direction: row-reverse; 
+    gap: 5%;
+}
+.upload-container {
+    flex: 2;
+}
+.upload-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #666;
+    width: 100%;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+.upload-box span {
+    font-size: 14px;
+    color: #888;
+}
+#image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.form-container {
+    flex: 1;
+}
+.form-container p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+#user-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+#user-form input, #user-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #666;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+}
+#user-form button {
+    width: 100%;
+    padding: 12px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: inherit;
+    transition: background 0.3s ease;
+}
+
+/* --- STRUTTURA STILE SCHERMATA INTERA (LIGHTBOX) --- */
+#lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95); /* Opacità nera profonda */
+    z-index: 2000; /* Sopra ogni elemento, header incluso */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.didascalie{
+    font-size: smaller;
+}
+
+/* Quando attivato via JS */
+#lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#lightbox-img {
+    max-width: 85%;
+    max-height: 85vh;
+    object-fit: contain;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+#lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    line-height: 1;
+    user-select: none;
+}
+#lightbox-close:hover {
+    color: #aaaaaa;
+    transform: scale(1.1);
+}
+
+/* --- GESTIONE MODALITÀ SCURA FLUIDA --- */
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+body.dark-mode #main-header {
+    background: #000000;
+    border-bottom: 1px solid #222;
+}
+body.dark-mode .site-nav a {
+    color: #ffffff;
+}
+body.dark-mode #user-form button {
+    background: #ffffff;
+    color: #000000;
+}
+body.dark-mode .lang-switcher button {
+    color: #ffffff;
+}
+body.dark-mode #logo-titolo {
+    filter: invert(1); 
+}
+
+body:not(.dark-mode) .site-nav a {
+    color: #333333;
+}
+
+/* MODALITÀ ASEMICA */
+.asemic-mode * {
+    font-family: 'SomaSoma', sans-serif !important;
+    font-style: normal !important;
+}
+
+footer {
+    text-align: center;
+    font-size: 11px;
+    padding: 40px;
+    border-top: 1px solid #222;
+}
+
+.capitolini{
+    font-family: "freight-macro-pro", serif;
+font-weight: 300;
+font-style: italic;
+}
