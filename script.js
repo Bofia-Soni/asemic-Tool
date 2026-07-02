@@ -63,8 +63,10 @@ const map = L.map('map', {
     maxBoundsViscosity: 1.0
 }).setView([35, 10], 2);
 
-L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; Stadia Maps &copy; OpenStreetMap',
+// NUOVO TILE LAYER DI CARTODB (Non richiede API key e funziona ovunque pubblico)
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
     minZoom: 2,
     maxZoom: 10
 }).addTo(map);
